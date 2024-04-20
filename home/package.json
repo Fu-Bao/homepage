@@ -1,0 +1,22 @@
+{
+  "name": "home",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0",
+    "vite-plugin-html-inline-svg": "https://github.com/qwreey/vite-plugin-html-inline-svg.git",
+    "vite-plugin-minify": "^1.5.2"
+  },
+  "dependencies": {
+    "hangul-js": "^0.2.6"
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>양조술사</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="양조술사">
+    <meta property="og:title" content="양조술사 - 팀소개.">
+    <meta property="og:url" content="https://se.dev.qwreey.moe/home.html">
+    <meta property="og:image" content="https://se.dev.qwreey.moe/home/og.png">
+    <meta property="og:description" content="양조술사를 만든 이들의 이야기를 들어보세요">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="양조술사">
+    <meta name="twitter:title" content="양조술사 - 팀소개.">
+    <link rel="stylesheet" href="./shared/shared.css">
+    <link rel="stylesheet" href="./team.css">
+    <script type="module" lang="typescript" src="./team.ts"></script>
+    <script type="module" lang="typescript" src="./shared/shared.ts"></script>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/webp" href="/favicon.webp"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <template id="tMemberCard">
+      <div id="Card" class="overflow-hidden select-none bg-black min-w-[160px] w-fit relative pb-[20px]">
+        <img style="--fill: #F8F8F8; box-shadow: -20px -20px 0px 20px var(--fill);" class="squarecle-tl absolute left-0 top-0 w-[21%] h-auto" width="64" height="64" viewBox="1 1 64 64" svg-inline="public/squarecle-overlay.svg">
+        <img style="--fill: #F8F8F8; box-shadow: 20px -20px 0px 20px var(--fill);" class="squarecle-tr absolute right-0 top-0 w-[21%] h-auto" width="64" height="64" viewBox="65 1 64 64" svg-inline="public/squarecle-overlay.svg">
+        <img style="--fill: #F8F8F8; box-shadow: -20px 20px 0px 20px var(--fill);" class="squarecle-bl absolute left-0 bottom-0 w-[21%] h-auto" width="64" height="64" viewBox="1 65 64 64" svg-inline="public/squarecle-overlay.svg">
+        <img style="--fill: #F8F8F8; box-shadow: 20px 20px 0px 20px var(--fill);" class="squarecle-br absolute right-0 bottom-0 w-[21%] h-auto" width="64" height="64" viewBox="65 65 64 64" svg-inline="public/squarecle-overlay.svg">
+        <div class="relative w-full px-[2px] pt-[2px] h-fit">
+          <img id="Image" class="pointer-events-none w-[300px]">
+          <!-- position absolute 상태에서는 backdrop 불가능하므로 before 를 통해 스크린스페이스로 옮기고 블러했습니다. -->
+          <div class="card-icon-blur flex flex-wrap justify-center content-center absolute bottom-[-28px] left-[24px] w-[45px] h-[45px] bg-[rgba(0,0,0,0.44)] rounded-full">
+            <img id="Icon" class="z-10 pointer-events-none" width="21" height="21">
+          </div>
+        </div>
+        <div class="pt-[38px] pl-[24px] flex flex-col gap-[4px]">
+          <p id="Name" class="text-[24px] font-semibold text-white"></p>
+          <p id="Role" class="text-[16px] font-regular text-[#B4B4B4]"></p>
+        </div>
+        <div class="pl-[24px] pt-[18px] flex flex-col gap-[20px]">
+          <div class="text-[14px] pl-[16px] border-l-[1px] border-[rgba(255,255,255,0.12)]">
+            <p class="text-[#B4B4B4] font-regular">
+              DEPARTMENT
+            </p>
+            <p id="Department" class="text-white font-medium"></p>
+          </div>
+          <div class="text-[14px] pl-[16px] border-l-[1px] border-[rgba(255,255,255,0.12)]">
+            <p class="text-[#B4B4B4] font-regular">
+              EMAIL
+            </p>
+            <p id="Email" class="text-white font-medium"></p>
+          </div>
+        </div>
+        <div class="pl-[24px] mt-[30px]">
+          <div class="flex flex-row items-center justify-start gap-[10px]">
+            <img src="/team/manlap-logo.webp" width="20" alt="만랩 팀 로고">
+            <p class="font-extrabold text-[18px] text-[white]">MAN_LAB</p>
+          </div>
+          <p class="ml-[30px] font-light text-[14px] text-[#bbbbbb]">#PUBAO</p>
+        </div>
+      </div>
+    </template>
+  </head>
+  <body class="preload">
+
+    <!-- topbar 사이즈는 60입니다. -->
+    <div id="Topbar" style="width: calc(100% - 8px)" class="select-none z-30 fixed top-0 flex flex-row items-center transition-all h-[60px] pl-[24px] md:pl-[100px] lg:pl-[150px] xl:pl-[200px]">
+      <img src="/favicon.webp" class="pointer-events-none h-[24px] w-[24px] mr-[5px]">
+      <p class="font-extrabold min-[390px]:text-[18px] text-[16px] text-black">양조술사</p>
+      <div class="md:ml-[70px] ml-[40px] flex flex-row md:gap-[28px] gap-[20px]">
+        <a href="/">
+          <p class="font-regular text-[14px] text-[#4D5762]">
+            앱 &amp; 서비스 소개
+          </p>
+        </a>
+        <a href="/team.html">
+          <p class="font-regular text-[14px] text-[#4D5762]">
+            팀 &amp; 소개
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="pointer-events-none select-none lg:text-[56px] md:text-[50px] sm:text-[42px] text-[34px] w-[100vw] h-[calc(100vh-60px)] mt-[60px] flex flex-row relative flex-wrap xl:content-center justify-center overflow-hidden">
+      <div class="font-bold text-gray-900 xl:mt-[-30px] xl:mr-[10em] mt-[64px] mb-[42px]">
+        <p>양조술사로</p>
+        <div class="flex min-[450px]:flex-row flex-col gap-[16px]">
+          <p>나에게</p>
+          <div class="min-w-[3.8em] flex flex-row relative">
+            <p id="Typer" class="text-[#FF7B6A]"></p>
+            <div id="TyperCursor" class="bg-black w-[2px] h-[75%] mt-[5.5%] ml-[4px]"></div>
+          </div>
+          <p>전통주 찾기</p>
+        </div>
+      </div>
+      <img svg-inline="public/home/img-home.svg" alt="" class="mt-[calc(-400px+60vw)] sm:mt-0 xl:ml-[14em] xl:transform xl:scale-125 origin-top-left transform-none xl:absolute opacity-50 pointer-events-none">
+    </div>
+    <div class="overflow-hidden pointer-events-none select-none relative lg:text-[56px] md:text-[48px] sm:text-[40px] min-[500px]:text-[30px] min-[380px]:text-[24px] text-[20px] w-[100vw] h-[100vh] bg-[#FFF7F6] gap-[40px] flex flex-col items-center justify-center">
+      <div class="flex gap-[10px] flex-row items-center mt-[-30px]">
+        <p class="text-[#FC6955] lg:text-[48px] md:text-[42px] sm:text-[38px] text-[34px] font-semibold">Vision</p>
+        <img class="w-[50px] h-[50px]" width="50" height="50" src="/team/thumbsup.webp" alt="(엄지척!)">
+      </div>
+      <p class="text-gray-900 font-bold">
+        양조의 새로운 즐거움을 제공하고<br>
+        대한민국 역사의 맛을 회복시키는 것
+      </p>
+      <img class="absolute max-[1200px]:hidden 2xl:w-[8em] xl:w-[5em] lg:w-[4em] w-[3em] max-w-[400px] 2xl:mr-[20em] mr-[19em] mt-[-5em]" src="/team/trophy.webp" alt="트로피">
+      <img class="absolute max-[1200px]:hidden 2xl:w-[8em] xl:w-[5em] lg:w-[4em] w-[3em] max-w-[400px] 2xl:ml-[21em] ml-[18.5em] mb-[-10em]" src="/team/glass.webp" alt="와인이 담겨있는 유리잔">
+    </div>
+    <div class="py-[32px] overflow-hidden pointer-events-none relative lg:text-[56px] md:text-[48px] sm:text-[40px] min-[500px]:text-[30px] min-[380px]:text-[24px] text-[20px] w-[100vw] min-h-[100vh] h-fit gap-[40px] flex flex-col items-center justify-center">
+      <div class="select-none flex gap-[40px] flex-col items-center ">
+        <p class="text-[#FC6955] lg:text-[48px] md:text-[42px] sm:text-[38px] text-[34px] font-semibold">Our Stroy</p>
+        <p class="text-gray-900 lg:text-[56px] md:text-[42px] sm:text-[38px] text-[34px] font-bold">
+          더 큰 가치의 시작 <span class="text-[#FC6955]">MAN_LAB</span>
+        </p>
+      </div>
+      <p class="text-[#4D5762] lg:text-[19px] text-[18px] px-[22px] font-regular md:text-center">
+        저희 팀의 이야기는 컴퓨터 소프트웨어 공학 전공의 고학년 학생들이 중심이 되어 시작되었습니다.<br class="sm:block hidden">
+        같은 마음을 가진 저희는 지식과 경험을 나누고자 저학년 학생들과 멘토링 그룹을 구성했습니다.<br class="sm:block hidden">
+        멘토링 세션을 진행하며 공통된 문제점들을 해결할 수 있는 소프트웨어 솔루션의 필요성을 깊이 느꼈습니다.<br class="sm:block hidden">
+        서로의 열정과 아이디어가 만나며, 창업으로 이어질 첫 번째 아이템이 탄생했습니다.<br class="sm:block hidden">
+        이를 기반으로 우리는 LAB 팀을 꾸리기로 결정했습니다.<br class="sm:block hidden">
+        이 팀은 각자의 전문성을 살려 개발과 테스트, 피드백을 반복하며 서비스를 개선해 나갔습니다.<br class="sm:block hidden">
+        MAN_LAB 팀은 아이디어를 현실로 전환하는 데 필요한 다양한 역량을 결집한 작업공간이 되었습니다.<br class="sm:block hidden">
+        저희 팀은 이제 초기 아이디어를 넘어 시장에서의 필요와 고객의 요구를 충족시키는 복합적인 소프트웨어 솔루션을 개발하는 단계에 이르렀습니다.<br class="sm:block hidden">
+        저희의 달리기는 고학년과 저학년이 함께 성장하며 각자의 경험을 토대로 혁신을 추구하는 과정에서 시작되었습니다.<br class="sm:block hidden">
+        저희는 이 팀워크와 협력을 통해 더 많은 가능성을 모색하고 실현해 나갈 것입니다.
+      </p>
+      <img class="absolute max-[1200px]:hidden 2xl:w-[8em] xl:w-[5em] lg:w-[4em] w-[3em] max-w-[400px] 2xl:mr-[20em] mr-[19em] mt-[-5em]" src="/team/backpack.webp" alt="트로피">
+      <img class="absolute max-[1200px]:hidden 2xl:w-[8em] xl:w-[5em] lg:w-[4em] w-[3em] max-w-[400px] 2xl:ml-[21em] ml-[20em] mb-[1em]" src="/team/hat.webp" alt="와인이 담겨있는 유리잔">
+    </div>
+    <div class="w-[100vw] h-fit bg-[#F8F8F8] pt-[90px]">
+      <div class="flex flex-col items-center gap-[25px] pb-[70px]">
+        <p class="text-[#FC6955] font-bold text-[48px]">Meet our team</p>
+        <p class="text-[#161C2D] font-semibold text-[19px]">Team. MAN_LAB</p>
+      </div>
+      <div id="MemberGrid" class="grid lg:grid-cols-[auto_auto_auto] sm:grid-cols-[auto_auto] grid-cols-[auto] justify-center content-center items-center grid-flow-row 2xl:gap-[100px] xl:gap-[60px] lg:gap-[32px] md:gap-[28px] gap-[12px]"></div>
+    </div>
+
+    <!-- 바닥글 -->
+    <div id="footer" class="flex-wrap content-center gap-[24px] md:gap-[128px] lg:gap-[256px] xl:gap-[320px] 2xl:gap-[410px] py-[64px] flex md:flex-row flex-col pt-[64px] pb-[128px] justify-center">
+      <p class="font-regular text-[14px] text-[#444444]">
+        <span class="font-medium text-gray-700">대표</span> 김민제 | <span class="font-medium text-gray-700">사업자번호</span> 111-123456-78910<br>
+        <span class="font-medium text-gray-700"></span>회사명</span> 아이디제이디(I.D.J.D)<br>
+        <span class="font-medium text-gray-700"></span>주소</span> 대한민국 서울특별시 강남구 압구정로4길 13-11 4층<br>
+        <span class="font-medium text-gray-700"></span>전화</span> 053-123-1234 | <span class="font-medium text-gray-700">문의</span> gcc@gcgroup.co.kr
+      </p>
+      <div>
+        <a href="/">
+          <p class="underline font-regular text-[14px] text-[#444444]">
+            앱 &amp; 서비스 소개
+          </p>
+        </a>
+        <a href="/team.html">
+          <p class="underline font-regular text-[14px] text-[#444444]">
+            팀 &amp; 소개
+          </p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
