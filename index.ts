@@ -21,6 +21,14 @@ window.addEventListener("load", ()=>{
   }
   document.body.addEventListener("scroll", ToppageRecalculate)
   document.body.addEventListener("scrollend", ToppageRecalculate)
+
+  function ScrollButtonRecalculate() {
+    const height = document.body.clientHeight
+    const scrollY = document.body.scrollTop
+    ScrollButton.style.opacity = Math.min(1-scrollY/height*2.5,1).toString()
+  }
+  document.body.addEventListener("scroll", ScrollButtonRecalculate)
+  document.body.addEventListener("scrollend", ScrollButtonRecalculate)
 })
 
 // 스크롤 버튼

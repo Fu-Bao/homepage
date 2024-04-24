@@ -8,8 +8,8 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="양조술사">
     <meta property="og:title" content="양조술사 - 술에도 이야기가 있다.">
-    <meta property="og:url" content="https://se.dev.qwreey.moe/home.html">
-    <meta property="og:image" content="https://se.dev.qwreey.moe/home/og.png">
+    <meta property="og:url" content="https://yangjo.kr/home.html">
+    <meta property="og:image" content="https://yangjo.kr/home/og.png">
     <meta property="og:description" content="양조술사: 전통과 현대가 만나는 맞춤형 양조 경험, 지역 특산주를 경험하고 나만의 술을 디자인 해보세요">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="양조술사">
@@ -26,8 +26,12 @@
 
     <!-- topbar 사이즈는 60입니다. -->
     <div id="Topbar" style="width: calc(100% - 8px)" class="select-none z-30 fixed top-0 flex flex-row items-center transition-all h-[60px] pl-[24px] md:pl-[100px] lg:pl-[150px] xl:pl-[200px]">
-      <img src="/favicon.webp" class="pointer-events-none h-[24px] w-[24px] mr-[5px]">
-      <p class="font-extrabold min-[390px]:text-[18px] text-[16px] text-black">양조술사</p>
+      <a href="/">
+        <img src="/favicon.webp" class="pointer-events-none h-[24px] w-[24px] mr-[5px]">
+      </a>
+      <a href="/">
+        <p class="font-extrabold min-[390px]:text-[18px] text-[16px] text-black">양조술사</p>
+      </a>
       <div class="md:ml-[70px] ml-[40px] flex flex-row md:gap-[28px] gap-[20px]">
         <a href="/">
           <p class="font-regular text-[14px] text-[#4D5762]">
@@ -36,7 +40,7 @@
         </a>
         <a href="/team.html">
           <p class="font-regular text-[14px] text-[#4D5762]">
-            팀 &amp; 소개
+            팀 &amp; Vision 소개
           </p>
         </a>
       </div>
@@ -47,7 +51,7 @@
          구현이 깔끔하지가 않아요 -->
     <div id="TopPage"
       style="height: calc( 100vh - 60px + 20vh );"
-      class="select-none flex justify-end relative mt-[60px]">
+      class="overflow-visible select-none flex justify-end relative mt-[60px]">
       <img
         alt="주황색 배경 위에 9 개의 스마트폰이 양조술사 어플리케이션의 화면을 보여주고 있다."
         src="/home/img-top.svg"
@@ -66,58 +70,67 @@
     </div>
 
     <div data-nth="1" class="page-content select-none bg-white min-h-[750px] py-[32px] 2xl:p-0 w-full flex flex-col 2xl:flex-row justify-center items-center">
-      <div class="2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
+      <div class="px-[12px] 2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
         <p class="mb-[16px] text-[#FC6955] text-[18px] font-semibold">홈 화면</p>
-        <p class="mb-[24px] text-gray-900 font-bold text-[48px] md:text-[58px]">홈화면에서<br>모든 정보를 한눈에!</p>
+        <p class="mb-[24px] text-gray-900 font-bold text-[30px] min-[400px]:text-[40px] md:text-[58px]">홈화면에서<br>모든 정보를 한눈에!</p>
         <p>나만의 술을 만들 수 있는 양조술사 레시피,<br>계절 & 시즌별 한정으로 만날 수 있는 주류,<br>양조술사들의 주간 BEST Pick 까지! 모두 홈화면에서 만나보세요.</p>
       </div>
-      <img svg-inline="public/home/img-home.svg" alt="양조술사 어플리케이션의 홈 화면을 보여주고 있다. 화면에는 오늘의 양조술사 레시피, 봄 시즌 컬렉션, 양조술사 주간 Best Pick 이 표시되고 있으며. 찜한 상품, 출석 체크, 친구 초대와 같은 기능 버튼이 표시되어있다." class="pointer-events-none">
+      <img svg-inline="public/home/img-home.svg" alt="양조술사 어플리케이션의 홈 화면을 보여주고 있다. 화면에는 오늘의 양조술사 레시피, 봄 시즌 컬렉션, 양조술사 주간 Best Pick 이 표시되고 있으며. 찜한 상품, 출석 체크, 친구 초대와 같은 기능 버튼이 표시되어있다." class="2xl:ml-0 ml-[60px] h-[calc(40vw+300px)] 2xl:mt-0 2xl:h-auto pointer-events-none">
     </div>
 
     <div data-nth="2" class="page-content select-none bg-[#FFF7F6] min-h-[750px] py-[32px] 2xl:p-0 w-full flex flex-col 2xl:flex-row justify-center items-center">
-      <div class="2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
+      <div class="px-[12px] 2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
         <p class="mb-[16px] text-[#FC6955] text-[18px] font-semibold">양조술사 레시피 제작</p>
-        <p class="mb-[24px] text-gray-900 font-bold text-[40px] sm:text-[48px] md:text-[58px]">세상에서 가장 맛있는<br>나만의 술 만들기!</p>
+        <p class="mb-[24px] text-gray-900 font-bold text-[30px] min-[400px]:text-[40px] sm:text-[48px] md:text-[58px]">세상에서 가장 맛있는<br>나만의 술 만들기!</p>
         <p>접하기 어려운 양조 취미를 세상에서 가장 쉽게 접하고<br>나만의 레시피로 술을 만들어 볼 수 있어요.</p>
       </div>
-      <img svg-inline="public/home/img-create.svg" alt="양조술사 어플리케이션의 레시피 제작 화면을 보여주고 있다. 어떤 발효주를 양조할 것인지 물어보고 있다. 탁주, 양주, 청주, 막걸리, 맥주 등의 발효주가 선택지로 표시된다." class="pointer-events-none">
+      <img svg-inline="public/home/img-create.svg" alt="양조술사 어플리케이션의 레시피 제작 화면을 보여주고 있다. 어떤 발효주를 양조할 것인지 물어보고 있다. 탁주, 양주, 청주, 막걸리, 맥주 등의 발효주가 선택지로 표시된다." class="h-[calc(40vw+300px)] 2xl:h-auto pointer-events-none">
     </div>
 
     <div data-nth="3" class="page-content select-none bg-white min-h-[750px] py-[32px] 2xl:p-0 w-full flex flex-col 2xl:flex-row justify-center items-center">
-      <div class="2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
+      <div class="px-[12px] 2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
         <p class="mb-[16px] text-[#FC6955] text-[18px] font-semibold">양조술사 레시피</p>
-        <p class="mb-[24px] text-gray-900 font-bold text-[40px] sm:text-[48px] md:text-[58px]">과거와 현재의 만남.<br>이야기가 담긴 술 득템!</p>
+        <p class="mb-[24px] text-gray-900 font-bold text-[30px] min-[400px]:text-[40px] sm:text-[48px] md:text-[58px]">과거와 현재의 만남.<br>이야기가 담긴 술 득템!</p>
         <p>모든 술에는 이야기가 숨어 있습니다!<br>'양조술사'와 함께, 깊은 이야기를 탐험하고,<br>당신만의 이야기를 써내려가세요.</p>
       </div>
-      <img svg-inline="public/home/img-recipe.svg" alt="" class="pointer-events-none">
+      <img svg-inline="public/home/img-recipe.svg" alt="" class="h-[calc(40vw+300px)] 2xl:h-auto pointer-events-none">
     </div>
 
     <div data-nth="4" class="page-content select-none bg-[#FFF7F6] min-h-[750px] py-[32px] 2xl:p-0 w-full flex flex-col 2xl:flex-row justify-center items-center">
-      <div class="2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
+      <div class="px-[12px] 2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
         <p class="mb-[16px] text-[#FC6955] text-[18px] font-semibold">전국 8도 전통주 찾기</p>
-        <p class="mb-[24px] text-gray-900 font-bold text-[40px] sm:text-[48px] md:text-[58px]">대한민국 맛있는 술<br>집합!</p>
+        <p class="mb-[24px] text-gray-900 font-bold text-[30px] min-[400px]:text-[40px] sm:text-[48px] md:text-[58px]">대한민국 맛있는 술<br>집합!</p>
         <p>한국의 영혼을 담은 한 잔, 전국 8도의 진귀한 술들을<br>'양조술사'에서 직접 만나보세요.</p>
       </div>
-      <img svg-inline="public/home/img-find.svg" alt="" class="pointer-events-none">
+      <img svg-inline="public/home/img-find.svg" alt="" class="h-[calc(40vw+300px)] 2xl:h-auto pointer-events-none">
     </div>
 
     <div data-nth="5" class="page-content select-none bg-white min-h-[750px] py-[32px] 2xl:p-0 w-full flex flex-col 2xl:flex-row justify-center items-center">
-      <div class="2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
+      <div class="px-[12px] 2xl:content-start content-center flex-wrap mb-6 2xl:m-0 flex flex-col w-full max-w-[650px]">
         <p class="mb-[16px] text-[#FC6955] text-[18px] font-semibold">커뮤니티</p>
-        <p class="mb-[24px] text-gray-900 font-bold text-[40px] sm:text-[48px] md:text-[58px]">양조 취미술사,<br>여기 모두 모여라!</p>
+        <p class="mb-[24px] text-gray-900 font-bold text-[30px] min-[400px]:text-[40px] sm:text-[48px] md:text-[58px]">양조 취미술사,<br>여기 모두 모여라!</p>
         <p>다가가기 어려웠던 양조 취미와<br>모든 술의 정보들을 서로 나누어보아요.</p>
       </div>
-      <img svg-inline="public/home/img-community.svg" alt="" class="pointer-events-none">
+      <img svg-inline="public/home/img-community.svg" alt="" class="h-[calc(40vw+300px)] 2xl:h-auto pointer-events-none">
     </div>
 
     <!-- 바닥글 -->
     <div id="footer" class="flex-wrap content-center gap-[24px] md:gap-[128px] lg:gap-[256px] xl:gap-[320px] 2xl:gap-[410px] py-[64px] flex md:flex-row flex-col pt-[64px] pb-[128px] justify-center">
-      <p class="font-regular text-[14px] text-[#444444]">
-        <span class="font-medium text-gray-700">대표</span> 김민제 | <span class="font-medium text-gray-700">사업자번호</span> 111-123456-78910<br>
-        <span class="font-medium text-gray-700"></span>회사명</span> 아이디제이디(I.D.J.D)<br>
-        <span class="font-medium text-gray-700"></span>주소</span> 대한민국 서울특별시 강남구 압구정로4길 13-11 4층<br>
-        <span class="font-medium text-gray-700"></span>전화</span> 053-123-1234 | <span class="font-medium text-gray-700">문의</span> gcc@gcgroup.co.kr
-      </p>
+      <div class="flex min-[550px]:flex-row flex-col items-center gap-[30px]">
+        <div class="flex flex-row items-center gap-[7px]">
+          <img width="50" height="50" src="/team/team-logo.webp" alt="MAN_LAB 팀의 로고">
+          <p class="font-extrabold text-[20px]">
+            MAN_LAB
+          </p>
+        </div>
+        <p class="font-regular text-[14px] text-[#444444]">
+          <!--  | <span class="font-medium text-gray-700">사업자번호</span> 111-123456-78910 -->
+          <!-- <span class="font-medium text-gray-700">대표</span> 류은재<br> -->
+          <span class="font-medium text-gray-700">회사명</span> 만랩(MAN_LAB)<br>
+          <span class="font-medium text-gray-700">주소</span> 경상북도 구미시 대학로 61 벤처창업관 220호<br>
+          <span class="font-medium text-gray-700">전화</span> 010-6517-7736 | <span class="font-medium text-gray-700">문의</span> davin0710@man-lab.kr
+        </p>
+      </div>
       <div>
         <a href="/">
           <p class="underline font-regular text-[14px] text-[#444444]">
@@ -126,7 +139,7 @@
         </a>
         <a href="/team.html">
           <p class="underline font-regular text-[14px] text-[#444444]">
-            팀 &amp; 소개
+            팀 &amp; Vision 소개
           </p>
         </a>
       </div>
